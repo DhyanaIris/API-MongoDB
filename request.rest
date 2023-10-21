@@ -6,7 +6,7 @@ Content-Type: application/json
 {
     "nome": "Dhyana Iris",
     "dataNascimento": "2000-09-02",
-    "profissao": "estudante",
+    "profissao": "Estudante",
     "cor": "Branca",
     "estado": "Santa Catarina",
     "cidade": "Criciúma"
@@ -39,7 +39,14 @@ Content-Type: application/json
     "cidade": "Seul"
 }
 
+// Update de varios valores aleatorios
+###
+POST http://localhost:3000/api/pessoa/updateRandom
 
 // Delete de um item especifico, passar o id
 ###
 DELETE http://localhost:3000/api/pessoa/6521b973899b6f9696243e24
+
+// Delete de todos os itens do banco de dados
+###
+DELETE http://localhost:3000/api/pessoa/deleteAllData

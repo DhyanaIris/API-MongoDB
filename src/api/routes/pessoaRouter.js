@@ -24,6 +24,14 @@ router
   .put((req, res) => pessoaController.update(req, res));
 
 router
+  .route("/pessoa/updateRandom")
+  .post((req, res) => pessoaController.updateManyRandom(req, res));
+
+router
+  .route("/pessoa/deleteAllData")
+  .delete((req, res) => pessoaController.deleteAllData(req, res))
+
+router
   .route("/pessoa/:id")
   .delete((req, res) => pessoaController.delete(req, res));
 
