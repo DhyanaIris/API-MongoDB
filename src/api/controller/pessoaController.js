@@ -1,6 +1,5 @@
 const Pessoa = require("../models/pessoaSchema");
 const faker = require('faker');
-const mongoose = require('mongoose');
 
 const pessoaController = {
   // Cria um novo item Pessoa
@@ -25,7 +24,7 @@ const pessoaController = {
   createManyRandom: async (req, res) => {
     try {
       // Alterar o valor para inserção de mais ou menos itens no banco
-      const quantidade = 1000;
+      const quantidade = 10000;
       const randomPessoas = [];
 
       for (let i = 0; i < quantidade; i++) {
@@ -97,7 +96,7 @@ const pessoaController = {
   updateManyRandom: async (req, res) => {
     try {
       // Alterar o valor para atualizar mais ou menos itens no banco
-      const quantidade = 1000;
+      const quantidade = 10000;
       // Consulta para encontrar documentos a serem atualizados
       const query = { _id: { $exists: true } }; // Isso irá corresponder a qualquer documento com um _id existente
       const result = await Pessoa.find(query).exec();

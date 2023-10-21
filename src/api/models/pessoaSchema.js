@@ -9,6 +9,10 @@ const pessoaSchema = new mongoose.Schema({
     cidade: String
   });
   
+// // Adicione um índice ao campo 'nome'
+// pessoaSchema.index({ nome: 1 });
+// console.log("Indice criado")
+
 const Pessoa = mongoose.model('Pessoa', pessoaSchema);
 
 module.exports = Pessoa;

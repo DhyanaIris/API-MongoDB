@@ -29,7 +29,7 @@ router
 
 router
   .route("/pessoa/deleteAllData")
-  .delete((req, res) => pessoaController.deleteAllData(req, res))
+  .delete((req, res) => pessoaController.deleteAllData(req, res));
 
 router
   .route("/pessoa/:id")
